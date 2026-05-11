@@ -1,0 +1,17 @@
+{
+  "_comment": "Example failure history for axes-mapper.js. Try: node tools/clis/axes-mapper.js --history tools/clis/examples/incident-history.json --top 3",
+  "incidents": [
+    { "date": "2025-09-12", "summary": "auth token rotation broke gateway", "tags": ["auth", "rotation", "gateway"] },
+    { "date": "2025-10-03", "summary": "kafka consumer lag triggered queue depth alarm", "tags": ["queue", "kafka", "consumer"] },
+    { "date": "2025-10-18", "summary": "feature flag misconfig disabled checkout for 14 minutes", "tags": ["feature-flags", "config", "checkout"] },
+    { "date": "2025-11-02", "summary": "payment processor timeout cascaded into cart drops", "tags": ["payment", "timeout", "cascade"] },
+    { "date": "2025-11-21", "summary": "auth service deploy rolled back after 503s", "tags": ["auth", "deploy", "rollback"] },
+    { "date": "2025-12-05", "summary": "kafka rebalance during peak caused 8min processing pause", "tags": ["kafka", "rebalance", "queue"] },
+    { "date": "2026-01-09", "summary": "feature flag race condition served wrong pricing", "tags": ["feature-flags", "race", "pricing"] },
+    { "date": "2026-01-22", "summary": "OAuth refresh storm overwhelmed auth service", "tags": ["auth", "oauth", "storm"] },
+    { "date": "2026-02-14", "summary": "consumer group offset reset replayed 6h of events", "tags": ["queue", "consumer", "kafka"] },
+    { "date": "2026-03-01", "summary": "feature flag SDK version drift caused inconsistent rollouts", "tags": ["feature-flags", "sdk", "drift"] },
+    { "date": "2026-03-19", "summary": "DB connection pool exhausted under spike", "tags": ["db", "pool", "load"] },
+    { "date": "2026-04-08", "summary": "auth JWT signing key rotation skew", "tags": ["auth", "jwt", "rotation"] }
+  ]
+}

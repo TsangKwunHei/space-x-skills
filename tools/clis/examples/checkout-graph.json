@@ -1,0 +1,29 @@
+{
+  "_comment": "Example dependency graph for blast-radius.js. Each edge [from, to] means: 'to depends on from'. Try: node tools/clis/blast-radius.js tools/clis/examples/checkout-graph.json",
+  "nodes": [
+    "auth-service",
+    "feature-flags",
+    "api-gateway",
+    "cart-service",
+    "inventory-service",
+    "pricing-service",
+    "checkout-service",
+    "payment-processor",
+    "email-service",
+    "fulfillment-service",
+    "analytics-pipeline"
+  ],
+  "edges": [
+    ["auth-service", "api-gateway"],
+    ["feature-flags", "api-gateway"],
+    ["api-gateway", "cart-service"],
+    ["api-gateway", "checkout-service"],
+    ["cart-service", "checkout-service"],
+    ["inventory-service", "checkout-service"],
+    ["pricing-service", "checkout-service"],
+    ["checkout-service", "payment-processor"],
+    ["checkout-service", "fulfillment-service"],
+    ["checkout-service", "email-service"],
+    ["checkout-service", "analytics-pipeline"]
+  ]
+}

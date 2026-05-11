@@ -1,0 +1,35 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Run skill validator
+        run: bash scripts/validate-skills.sh
+
+      - name: Syntax-check CLI tools
+        run: |
+          for f in tools/clis/*.js; do
+            echo "Checking $f"
+            node --check "$f"
+          done
+
+      - name: Smoke-test --help on every CLI
+        run: |
+          for f in tools/clis/*.js; do
+            echo "--- $f --help ---"
+            node "$f" --help || exit 1
+          done
