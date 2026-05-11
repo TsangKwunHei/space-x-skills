@@ -2,10 +2,6 @@
 
 System-engineering skills for coding agents, derived from public SpaceX and NASA engineering documents.
 
-Agents can write code. They are weaker at the production discipline around the code: decomposing ambitious goals, designing around failure modes, defining interfaces, sequencing tests, executing safely, and closing feedback loops after failure.
-
-This repository turns aerospace-style systems engineering into reusable agent skills.
-
 ## The Problems
 
 From Andrej Karpathy's post:
@@ -17,15 +13,6 @@ From Andrej Karpathy's post:
 > "They still sometimes change/remove comments and code they don't sufficiently understand..."
 
 Those problems get worse as tasks get longer.
-
-A small coding task can survive a few bad assumptions. A production engineering effort cannot. Long-horizon agent work fails when the agent:
-
-- jumps from goal to code without decomposing the mission
-- designs features instead of systems
-- adds redundancy without naming the real failure modes
-- treats testing as coverage instead of sequencing
-- ships without readiness gates, rollback conditions, or decision ownership
-- writes postmortems without closing the anomaly loop
 
 ## The Solution
 
